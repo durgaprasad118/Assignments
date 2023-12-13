@@ -1,5 +1,5 @@
 import React from 'react'
-const Card = ({ name, description, tagline, ph, image_url, first_brewed }) => {
+const Card = ({ name, description, ph, image_url, first_brewed }) => {
   return (
     <div className="w-80 h-96">
       <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-center ">

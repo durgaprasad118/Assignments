@@ -1,4 +1,3 @@
-// App.js
 import React, { useEffect, useState } from 'react'
 import Card from './components/Card'
 import { useDataQuery } from './utilities/FetchData'
@@ -6,6 +5,7 @@ function App() {
   const { isLoading, error, data } = useDataQuery()
   const [dataApi, setDataApi] = useState([])
   const [searchQuery, setSearchQuery] = useState('')
+
 
   useEffect(() => {
     if (!isLoading && !error) {
@@ -16,11 +16,10 @@ function App() {
   const handleSearchInputChange = (e) => {
     setSearchQuery(e.target.value)
   }
-
   const handleResetClick = () => {
     setSearchQuery('')
   }
-
+  // TODO: do this or that
   const filteredData = dataApi.filter((item) =>
     item.name.toLowerCase().includes(searchQuery.toLowerCase()),
   )
